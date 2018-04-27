@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+    pageEncoding="iso-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form method="post" action="./professor">
+	<form method="post" action="./professor" accept-charset="iso-8859-1">
         <div class="form-control dados">
           <label for="nomeProfessor">Nome:</label>
             <input type="text" name="nomeProfessor" class="form-control form-control-lg" id="nomeProfessor" placeholder="Digite aqui o seu nome">
@@ -19,33 +19,33 @@
         <div class="form-control dados">
           <h2>Cursos</h2>
           <div class="form-check">
-            <input class="form-check-input" name="cursos" type="checkbox" value="ADS" id="defaultCheck1">
-            <label class="form-check-label" for="defaultCheck1">An√°lise e Desenvolvimento de Sistemas </label>
+            <input class="form-check-input" name="cursos" type="checkbox" value="An·lise e Desenvolvimento de Sistemas" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1">An·lise e Desenvolvimento de Sistemas </label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" name="cursos" type="checkbox" value="Comex" id="defaultCheck1">
-            <label class="form-check-label" for="defaultCheck1">Com√©rcio Exterior </label>
+            <input class="form-check-input" name="cursos" type="checkbox" value="ComÈrcio Exterior" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1">ComÈrcio Exterior </label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" name="cursos" type="checkbox" value="Log" id="defaultCheck1">
-            <label class="form-check-label" for="defaultCheck1">Logistica </label>
+            <input class="form-check-input" name="cursos" type="checkbox" value="LogÌstica" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1">LogÌstica </label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" name="cursos" type="checkbox" value="Ges" id="defaultCheck1">
-            <label class="form-check-label" for="defaultCheck1">Gest√£o Empresarial </label>
+            <input class="form-check-input" name="cursos" type="checkbox" value="Gest„o Empresarial" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1">Gest„o Empresarial </label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" name="cursos" type="checkbox" value="Pol" id="defaultCheck1">
-            <label class="form-check-label" for="defaultCheck1"> Pol√≠meros</label>
+            <input class="form-check-input" name="cursos" type="checkbox" value="PolÌmeros" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1"> PolÌmeros</label>
           </div>
         </div>
         <div class="row justify-content-center dados">
           <div class="col-sm-4">
-            <input type="submit" value="Pr√≥ximo" class="btn btn-success">
+            <input type="submit" value="PrÛximo" class="btn btn-success">
           </div>
         </div>
       </div>
-
+<%response.setCharacterEncoding("UTF-8");  %>
       </form>
 </body>
 </html>

@@ -28,6 +28,7 @@ public class ProfessorController extends HttpServlet{
 		professor.setNome(req.getParameter("nomeProfessor"));
 		professor.setIdFunc(Integer.parseInt(req.getParameter("idFunc")));
 		ArrayList<Curso> curso = new ArrayList<>();
+		req.setCharacterEncoding("iso-8859-1");
 		String[] c = req.getParameterValues("cursos");
 		
 		for (String s : c) {
@@ -60,5 +61,7 @@ public class ProfessorController extends HttpServlet{
 		*/
 		
 	}
+	
+	
 
 }

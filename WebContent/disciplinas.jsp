@@ -1,10 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+    pageEncoding="iso-8859-1"%>
 <%@ page import="model.Curso, java.util.List" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 <title>Insert title here</title>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="script.js"></script>
@@ -14,6 +14,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="src/style.css">
 <link rel="stylesheet" href="src/side-bar.css">
+
 </head>
 <body>
 <div class="sidenav">
@@ -24,7 +25,9 @@ List<Curso> curso = (List<Curso>)session.getAttribute("Cursos");
 	for(Curso c: curso){
 %>
 
-<a href="#"><%=c.getNome()%></a>
+<button href ="#" class="disc" value="<%=c.getNome() %>">
+<%=c.getNome() %>
+</a>
 
 <%} %>
 
@@ -36,6 +39,11 @@ List<Curso> curso = (List<Curso>)session.getAttribute("Cursos");
 
 
 </div>
-
+<script type="text/javascript">
+	$('button').click(function(){
+		var value = $(this).val();
+		alert("Nome:"+value);
+	});
+</script>
 </body>
 </html>
