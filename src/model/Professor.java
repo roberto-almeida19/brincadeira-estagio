@@ -3,7 +3,7 @@ package model;
 
 public class Professor {
 	private String nome;
-	private int idFunc;
+	private int cpf;
 	private Curso[] cursos = new Curso[5];
 	//Materias[] materias = new Materias[10];
 	//Tema[] temas = new Tema[10];
@@ -20,11 +20,11 @@ public class Professor {
 	public void setCursos(Curso[] cursos) {
 		this.cursos = cursos;
 	}
-	public int getIdFunc() {
-		return idFunc;
+	public int getCpf() {
+		return cpf;
 	}
-	public void setIdFunc(int idFunc) {
-		this.idFunc = idFunc;
+	public void setCpf(int cpf) {
+		this.cpf = cpf;
 	}
 	
 }

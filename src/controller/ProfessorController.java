@@ -26,7 +26,7 @@ public class ProfessorController extends HttpServlet{
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		Professor professor = new Professor();
 		professor.setNome(req.getParameter("nomeProfessor"));
-		professor.setIdFunc(Integer.parseInt(req.getParameter("idFunc")));
+		professor.setCpf(Integer.parseInt(req.getParameter("idFunc")));
 		ArrayList<Curso> curso = new ArrayList<>();
 		req.setCharacterEncoding("iso-8859-1");
 		String[] c = req.getParameterValues("cursos");
@@ -41,7 +41,7 @@ public class ProfessorController extends HttpServlet{
 		RequestDispatcher dispatcher =  req.getRequestDispatcher("disciplinas.jsp");
 		dispatcher.forward(req, resp);
 		//PrintWriter out = resp.getWriter();
-		System.out.println(professor.getNome()+" "+professor.getIdFunc());
+		System.out.println(professor.getNome()+" "+professor.getCpf());
 			for (Curso string : curso) {
 				System.out.println(string.getNome());
 			}
