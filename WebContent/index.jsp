@@ -13,7 +13,7 @@
             <input type="text" name="nomeProfessor" class="form-control form-control-lg" id="nomeProfessor" placeholder="Digite aqui o seu nome">
           <label for="nomeProfessor">CPF:</label>
             <div class="row">
-              <div class="col-sm-4"><input type="text" class="form-control" id="idFuncional" name="idFunc" placeholder="Digite aqui o seu ID Funcional"></div>
+              <div class="col-sm-4"><input type="text" class="form-control" id="idFuncional" name="idFunc" placeholder="Digite aqui o seu CPF"></div>
             </div>
         </div>
         <div class="form-control dados">

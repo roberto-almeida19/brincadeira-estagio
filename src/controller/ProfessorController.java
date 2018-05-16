@@ -37,7 +37,8 @@ public class ProfessorController extends HttpServlet{
 			curso.add(cu);
 		}
 		HttpSession session = (HttpSession) req.getSession();
-		session.setAttribute("Cursos", curso);
+		session.setAttribute("cursos", curso);
+		session.setAttribute("professor", professor);
 		RequestDispatcher dispatcher =  req.getRequestDispatcher("disciplinas.jsp");
 		dispatcher.forward(req, resp);
 		//PrintWriter out = resp.getWriter();

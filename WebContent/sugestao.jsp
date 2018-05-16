@@ -1,10 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="iso-8859-1"%>
-<%@ page import="model.Curso, java.util.List"%>
+    pageEncoding="UTF-8" import="java.util.*,model.Professor"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
 	integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -24,50 +23,40 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
 	integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
 	crossorigin="anonymous"></script>
-<link rel="stylesheet" href="src/style.css">
-<link rel="stylesheet" href="src/side-bar.css">
 
 </head>
 <body>
-<form action="./disciplinas" method="post">
-	<div class="main">
-		<h2 class="text-center">Disciplinas</h2>
-		<div class="disciplinas">
-		<form>
-		<div>
-		
-		
-				<%
-			List<Curso> curso = (List<Curso>) session.getAttribute("cursos");
-			for (Curso c : curso) {
-		%>
-
-		 <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"><%=c.getNome()%></button>
-  <div class="collapse" id="collapseExample">
-  <div class="card card-body">
-  
-    Disciplina:<input type="text" name="disciplina1">
-    Disciplina:<input type="text" name="disciplina2">
-  	 	
-<input type="submit" value="OK!">  	
-    </div>
-</div>
-  <br>
-
-			
-
-			<%
-				}
-			%>
-
-
-			
+<form action="./final" method="post">
+	<div class="container">
 	
-		</div>
-		</div>
+	<% Professor prof = (Professor)session.getAttribute("professor");
+		List<String> disc = (List<String>)session.getAttribute("disciplinas");
+		for(String s: disc){
+	%>
+
+
+	
+	<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+<%=s.toString()%>  
+  </button>
+</p>
+<div class="collapse" id="collapseExample">
+  <div class="card card-body">
+    <input type="text" name="sugestao1">
+    <input type="text" name="sugestao2">
+    <input type="text" name="sugestao3">
+    <input type="submit" value="OK!">
+  </div>
+</div>
+<%} 
+
+%>
+	
+	
+	
 	</div>
 
-</form>	
-	<script src="src/script.js"></script>
+
+</form>
 </body>
 </html>
